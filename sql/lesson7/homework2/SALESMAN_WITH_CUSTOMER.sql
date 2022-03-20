@@ -1,3 +1,3 @@
-SELECT SALESMAN.NAME, CUSTOMER.CUSTNAME
-FROM SALESMAN
-JOIN CUSTOMER ON SALESMAN.SALESMAN_ID = CUSTOMER.SALESMAN_ID;
+SELECT salesman.name, customer.custname
+  FROM salesman
+           JOIN customer ON salesman.salesman_id = customer.salesman_id;

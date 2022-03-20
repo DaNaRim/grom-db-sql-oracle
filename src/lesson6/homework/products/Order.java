@@ -3,6 +3,7 @@ package lesson6.homework.products;
 import java.util.Date;
 
 public class Order {
+
     private long id;
     private Customer customer;
     private Employee employee;
@@ -18,9 +19,20 @@ public class Order {
     private int postalCode;
     private String country;
 
-    public Order(long id, Customer customer, Employee employee, Date orderDate, Date requiredDate, Date shippedDate,
-                 String shipVia, int freight, String shipName, String shipAddress, String shipCity, String shipRegion,
-                 int postalCode, String country) {
+    public Order(long id,
+                 Customer customer,
+                 Employee employee,
+                 Date orderDate,
+                 Date requiredDate,
+                 Date shippedDate,
+                 String shipVia,
+                 int freight,
+                 String shipName,
+                 String shipAddress,
+                 String shipCity,
+                 String shipRegion,
+                 int postalCode,
+                 String country) {
         this.id = id;
         this.customer = customer;
         this.employee = employee;

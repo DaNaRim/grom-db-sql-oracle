@@ -1,4 +1,4 @@
-SELECT CUSTOMER.CUSTNAME, CUSTOMER.CITY, SALESMAN.NAME, SALESMAN.CITY, DEAL.AMOUNT
-FROM SALESMAN
-JOIN CUSTOMER ON SALESMAN.SALESMAN_ID = CUSTOMER.CUSTOMER_ID
-JOIN DEAL ON CUSTOMER.CUSTOMER_ID = DEAL.CUSTOMER_ID AND DEAL.AMOUNT > 10000;
+SELECT customer.custname, customer.city, salesman.name, salesman.city, deal.amount
+  FROM salesman
+           JOIN customer ON salesman.salesman_id = customer.customer_id
+           JOIN deal ON customer.customer_id = deal.customer_id AND deal.amount > 10000;

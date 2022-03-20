@@ -1,8 +1,9 @@
-CREATE TABLE FORUM_CATEGORIES (
- ID NUMBER,
- CONSTRAINT FORUM_CATEGORIES_PK PRIMARY KEY (ID),
- TTLE NVARCHAR2(64),
- DESCRIPTION CLOB,
- DATE TIMESTAMP,
- IP NVARCHAR2(20)
+CREATE TABLE forum_categories
+(
+    id          NUMBER,
+    title       NVARCHAR2(64),
+    description CLOB,
+    date        TIMESTAMP,
+    ip          NVARCHAR2(20),
+    CONSTRAINT forum_categories_pk PRIMARY KEY (id)
 );

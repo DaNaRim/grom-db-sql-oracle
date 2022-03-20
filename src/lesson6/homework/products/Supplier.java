@@ -1,6 +1,7 @@
 package lesson6.homework.products;
 
 public class Supplier {
+
     private long id;
     private String companyName;
     private String contactName;
@@ -14,8 +15,18 @@ public class Supplier {
     private int fax;
     private String homePage;
 
-    public Supplier(long id, String companyName, String contactName, String contactTitle, String address, String city,
-                    String region, int postalCode, String country, int phone, int fax, String homePage) {
+    public Supplier(long id,
+                    String companyName,
+                    String contactName,
+                    String contactTitle,
+                    String address,
+                    String city,
+                    String region,
+                    int postalCode,
+                    String country,
+                    int phone,
+                    int fax,
+                    String homePage) {
         this.id = id;
         this.companyName = companyName;
         this.contactName = contactName;

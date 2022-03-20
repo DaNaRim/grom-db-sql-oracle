@@ -1,6 +1,7 @@
 package lesson6.homework.products;
 
 public class Shipper {
+
     private long id;
     private String companyName;
     private int Phone;

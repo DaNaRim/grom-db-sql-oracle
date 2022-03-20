@@ -3,6 +3,7 @@ package lesson6.homework.products;
 import java.util.Date;
 
 public class Employee {
+
     private long id;
     private String lastName;
     private String firstName;
@@ -21,9 +22,23 @@ public class Employee {
     private String notes;
     private String reportsTo;
 
-    public Employee(long id, String lastName, String firstName, String title, String titleOfCourtesy, Date birthDate,
-                    Date hireDate, String address, String city, String region, int postalDode, String country,
-                    int homePhone, String extension, String photo, String notes, String reportsTo) {
+    public Employee(long id,
+                    String lastName,
+                    String firstName,
+                    String title,
+                    String titleOfCourtesy,
+                    Date birthDate,
+                    Date hireDate,
+                    String address,
+                    String city,
+                    String region,
+                    int postalDode,
+                    String country,
+                    int homePhone,
+                    String extension,
+                    String photo,
+                    String notes,
+                    String reportsTo) {
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;

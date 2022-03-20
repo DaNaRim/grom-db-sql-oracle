@@ -1,8 +1,9 @@
-CREATE TABLE HOTEL (
- ID NUMBER,
- CONSTRAINT HOTEL_ID PRIMARY KEY (ID),
- COUNTRY NVARCHAR2(50) DEFAULT 'N/A',
- CHECK (COUNTRY != 'Romania' AND COUNTRY != 'Belgium' AND COUNTRY != 'China' AND COUNTRY != 'Ukraine'),
- CITY NVARCHAR2(50) NOT NULL,
- STREET NVARCHAR2(50)
+CREATE TABLE hotel
+(
+    id      NUMBER,
+    country NVARCHAR2(50) DEFAULT 'N/A',
+    city    NVARCHAR2(50) NOT NULL,
+    street  NVARCHAR2(50),
+    CONSTRAINT hotel_id PRIMARY KEY (id),
+    CHECK (country != 'Romania' AND country != 'Belgium' AND country != 'China' AND country != 'Ukraine')
 );

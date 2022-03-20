@@ -1,4 +1,4 @@
-SELECT CUSTOMER.CUSTNAME
-FROM CUSTOMER
-JOIN DEAL ON DEAL.CUSTOMER_ID = CUSTOMER.CUSTOMER_ID
- AND DEAL.DEAL_DATE BETWEEN TO_DATE('2017', 'yyyy') AND TO_DATE('2018', 'yyyy');
+SELECT customer.custname
+  FROM customer
+           JOIN deal ON deal.customer_id = customer.customer_id
+      AND deal.deal_date BETWEEN TO_DATE('2017', 'yyyy') AND TO_DATE('2018', 'yyyy');

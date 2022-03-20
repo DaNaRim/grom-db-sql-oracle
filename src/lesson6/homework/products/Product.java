@@ -1,6 +1,7 @@
 package lesson6.homework.products;
 
 public class Product {
+
     private long id;
     private String name;
     private Supplier supplier;
@@ -11,4 +12,5 @@ public class Product {
     private int unitInOrder;
     private int reorderedLevel;
     private int discontinued;
+
 }

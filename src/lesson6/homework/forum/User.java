@@ -3,6 +3,7 @@ package lesson6.homework.forum;
 import java.util.Date;
 
 public class User {
+
     private long id;
     private String nick;
     private String password;

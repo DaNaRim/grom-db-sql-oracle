@@ -1,6 +1,7 @@
 package lesson6;
 
 public class Author {
+
     private long id;
     private String name;
 

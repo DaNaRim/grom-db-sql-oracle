@@ -8,7 +8,7 @@ public class Demo {
     //2. create object with some values +
     //3. using it +
 
-    Order order = new Order(1001, "tool2212", 140,  new Date(), new Date());
+    Order order = new Order(1001, "tool2212", 140, new Date(), new Date());
 
     //db
     //1. create table with columns +

@@ -1,15 +1,16 @@
-CREATE TABLE SUPPLIERS (
- SUPPLIER_ID NUMBER,
- CONSTRAINT SUPPLIERS_PK PRIMARY KEY (SUPPLIER_ID),
- COMPANY_NAME NVARCHAR2(50),
- CONTACT_NAME NVARCHAR2(50),
- CONTACT_TITLE NVARCHAR2(50),
- ADDRESS NVARCHAR2(50),
- CITY NVARCHAR2(50),
- REGION NVARCHAR2(50),
- POSTAL_CODE NUMBER,
- COUNTRY NVARCHAR2(50),
- PHONE NUMBER,
- FAX NUMBER,
- HOME_PAGE NVARCHAR2(200)
+CREATE TABLE suppliers
+(
+    supplier_id   NUMBER,
+    company_name  NVARCHAR2(50),
+    contact_name  NVARCHAR2(50),
+    contact_title NVARCHAR2(50),
+    address       NVARCHAR2(50),
+    city          NVARCHAR2(50),
+    region        NVARCHAR2(50),
+    postal_code   NUMBER,
+    country       NVARCHAR2(50),
+    phone         NUMBER,
+    fax           NUMBER,
+    home_page     NVARCHAR2(200),
+    CONSTRAINT suppliers_pk PRIMARY KEY (supplier_id)
 );

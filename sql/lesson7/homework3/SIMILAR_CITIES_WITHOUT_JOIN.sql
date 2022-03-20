@@ -1,3 +1,3 @@
-SELECT SALESMAN.NAME, CUSTOMER.CUSTNAME, SALESMAN.CITY
-FROM SALESMAN, CUSTOMER
-WHERE SALESMAN.CITY = CUSTOMER.CITY;
+SELECT salesman.name, customer.custname, salesman.city
+  FROM salesman, customer
+ WHERE salesman.city = customer.city;

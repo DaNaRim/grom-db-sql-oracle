@@ -1,6 +1,7 @@
 package lesson6.homework.products;
 
 public class OrderDetails {
+
     private Order order;
     private Product product;
     private int unitPrice;

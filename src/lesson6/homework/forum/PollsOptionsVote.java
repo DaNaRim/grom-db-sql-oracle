@@ -3,6 +3,7 @@ package lesson6.homework.forum;
 import java.util.Date;
 
 public class PollsOptionsVote {
+
     private long id;
     private PollsOptions pollsOptions;
     private User user;

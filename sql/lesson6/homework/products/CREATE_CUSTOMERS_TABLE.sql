@@ -1,13 +1,14 @@
-CREATE TABLE CUSTOMERS (
- CUSTOMER_ID NUMBER,
- CONSTRAINT CUSTOMERS_PK PRIMARY KEY (CUSTOMER_ID),
- COMPANY_NAME NVARCHAR2(50),
- CONTACT_TITLE NVARCHAR2(200),
- ADDRESS NVARCHAR2(200),
- CITY NVARCHAR2(50),
- REGION NVARCHAR2(50),
- POSTAL_CODE NUMBER,
- COUNTRY NVARCHAR2(50),
- PHONE NUMBER,
- FAX NUMBER
+CREATE TABLE customers
+(
+    customer_id   NUMBER,
+    company_name  NVARCHAR2(50),
+    contact_title NVARCHAR2(200),
+    address       NVARCHAR2(200),
+    city          NVARCHAR2(50),
+    region        NVARCHAR2(50),
+    postal_code   NUMBER,
+    country       NVARCHAR2(50),
+    phone         NUMBER,
+    fax           NUMBER,
+    CONSTRAINT customers_pk PRIMARY KEY (customer_id)
 );

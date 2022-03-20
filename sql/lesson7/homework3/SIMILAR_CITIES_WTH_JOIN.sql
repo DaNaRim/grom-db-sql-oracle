@@ -1,3 +1,3 @@
-SELECT SALESMAN.NAME, CUSTOMER.CUSTNAME, SALESMAN.CITY
-FROM SALESMAN
-JOIN CUSTOMER ON SALESMAN.CITY = CUSTOMER.CITY;
+SELECT salesman.name, customer.custname, salesman.city
+  FROM salesman
+           JOIN customer ON salesman.city = customer.city;

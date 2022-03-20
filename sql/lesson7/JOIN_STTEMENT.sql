@@ -1,48 +1,50 @@
-CREATE TABLE SALESMAN (
- SALESMAN_ID NUMBER PRIMARY KEY,
- NAME NVARCHAR2(50) NOT NULL,
- CITY NVARCHAR2(50) NOT NULL,
- COMMISSION NUMBER(*,2) DEFAULT '0.1'
+CREATE TABLE salesman
+(
+    salesman_id NUMBER PRIMARY KEY,
+    name        NVARCHAR2(50) NOT NULL,
+    city        NVARCHAR2(50) NOT NULL,
+    commission  NUMBER(*, 2) DEFAULT '0.1'
 );
 
-CREATE TABLE CUSTOMER (
- CUSTOMER_ID NUMBER PRIMARY KEY,
- CUSTNAME NVARCHAR2(50) NOT NULL,
- CITY NVARCHAR2(50) NOT NULL,
- SALESMAN_ID NUMBER,
- CONSTRAINT SALESMAN_FK FOREIGN KEY (SALESMAN_ID) REFERENCES SALESMAN (SALESMAN_ID)
+CREATE TABLE customer
+(
+    customer_id NUMBER PRIMARY KEY,
+    name        NVARCHAR2(50) NOT NULL,
+    city        NVARCHAR2(50) NOT NULL,
+    salesman_id NUMBER,
+    CONSTRAINT salesman_fk FOREIGN KEY (salesman_id) REFERENCES salesman (salesman_id)
 );
 
-INSERT INTO SALESMAN VALUES (5001, 'James Hoog', 'New York', 0.15);
-INSERT INTO SALESMAN VALUES (5002, 'Nail Knite', 'Paris', 0.13);
-INSERT INTO SALESMAN VALUES (5005, 'Pit Alex', 'London', 0.11);
-INSERT INTO SALESMAN VALUES (5006, 'Mc Lyon', 'Paris', 0.14);
-INSERT INTO SALESMAN VALUES (5003, 'Lauson Men', 'London', 0.12);
-INSERT INTO SALESMAN VALUES (5007, 'Andrew Wise', 'Nikosia', 0.29);
-INSERT INTO SALESMAN VALUES (5008, 'Some Saleman', 'Kiev', 0.09);
-INSERT INTO SALESMAN VALUES (5009, 'Denis Kokorin', 'Moskow', 0.1);
+INSERT INTO salesman VALUES (5001, 'James Hoog', 'New York', 0.15);
+INSERT INTO salesman VALUES (5002, 'Nail Knite', 'Paris', 0.13);
+INSERT INTO salesman VALUES (5005, 'Pit Alex', 'London', 0.11);
+INSERT INTO salesman VALUES (5006, 'Mc Lyon', 'Paris', 0.14);
+INSERT INTO salesman VALUES (5003, 'Lauson Men', 'London', 0.12);
+INSERT INTO salesman VALUES (5007, 'Andrew Wise', 'Nikosia', 0.29);
+INSERT INTO salesman VALUES (5008, 'Some Saleman', 'Kiev', 0.09);
+INSERT INTO salesman VALUES (5009, 'Denis Kokorin', 'Moskow', 0.1);
 
-INSERT INTO CUSTOMER VALUES (3002, 'Nick Rimando', 'New York', 5001);
-INSERT INTO CUSTOMER VALUES (3005, 'Graham Zusi', 'California', 5002);
-INSERT INTO CUSTOMER VALUES (3001, 'Brad Guzan', 'London', 5005);
-INSERT INTO CUSTOMER VALUES (3004, 'Fabian Johns', 'Paris', 5006);
-INSERT INTO CUSTOMER VALUES (3009, 'Geoff Camero', 'Berlin', 5003);
-INSERT INTO CUSTOMER VALUES (3008, 'Julian Green', 'London', 5002);
-INSERT INTO CUSTOMER VALUES (3007, 'Brad Davis', 'New York', 5001);
-INSERT INTO CUSTOMER VALUES (3003, 'Jozy Altido', 'Moskow', 5007);
-INSERT INTO CUSTOMER VALUES (3010, 'Misha Test', 'Kiev', null);
+INSERT INTO customer VALUES (3002, 'Nick Rimando', 'New York', 5001);
+INSERT INTO customer VALUES (3005, 'Graham Zusi', 'California', 5002);
+INSERT INTO customer VALUES (3001, 'Brad Guzan', 'London', 5005);
+INSERT INTO customer VALUES (3004, 'Fabian Johns', 'Paris', 5006);
+INSERT INTO customer VALUES (3009, 'Geoff Camero', 'Berlin', 5003);
+INSERT INTO customer VALUES (3008, 'Julian Green', 'London', 5002);
+INSERT INTO customer VALUES (3007, 'Brad Davis', 'New York', 5001);
+INSERT INTO customer VALUES (3003, 'Jozy Altido', 'Moskow', 5007);
+INSERT INTO customer VALUES (3010, 'Misha Test', 'Kiev', NULL);
 
-SELECT SALESMAN.NAME, CUSTOMER.CUSTNAME
-FROM SALESMAN, CUSTOMER
-WHERE SALESMAN.SALESMAN_ID = CUSTOMER.SALESMAN_ID;
+SELECT salesman.name, customer.custname
+  FROM salesman, customer
+ WHERE salesman.salesman_id = customer.salesman_id;
 
-SELECT SALESMAN.NAME, CUSTOMER.CUSTNAME
-FROM SALESMAN
-INNER JOIN CUSTOMER ON SALESMAN.SALESMAN_ID = CUSTOMER.SALESMAN_ID;
+SELECT salesman.name, customer.custname
+  FROM salesman
+           INNER JOIN customer ON salesman.salesman_id = customer.salesman_id;
 
-SELECT SALESMAN.NAME, CUSTOMER.CUSTNAME, SALESMAN.CITY
-FROM SALESMAN
-FULL JOIN CUSTOMER ON SALESMAN.CITY = CUSTOMER.CITY;
+SELECT salesman.name, customer.custname, salesman.city
+  FROM salesman
+           FULL JOIN customer ON salesman.city = customer.city;
 
 --SELECT
 --FROM
